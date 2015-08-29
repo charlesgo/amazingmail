@@ -1,0 +1,31 @@
+header.site-header.fixed {
+  display: none;
+}
+.menu ul li {
+	width:auto;
+}
+
+@media screen and (orientation:landscape) { 
+	header.site-header div.menu {
+		background-color:transparent;
+	}
+	.menu {
+		margin-top: -93px !important;
+		margin-left: 27% !important;
+	}
+	header.site-header div.menu {
+		width:72%;
+	}
+}
+@media screen and (orientation:portrait) { 
+	.top .menu ul li {
+	  display: block;
+	  list-style-type: none;
+	  width: 100%;
+	}
+	.realestate_banner {
+		background-position: -14px;
+	}
+}
+
+

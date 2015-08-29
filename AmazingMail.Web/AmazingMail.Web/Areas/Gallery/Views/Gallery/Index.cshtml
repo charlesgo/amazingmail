@@ -1,0 +1,69 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_GalleryLayout.cshtml";
+}
+
+    <div class="large-9 columns">
+        <div class="row">
+            <div class="gcardtpl_banner uniformc">
+                <div class="contbanner">
+                    <h3>Use One of Our Greeting Card Templates, or Create Your Own Design</h3>
+                    <p>We print and mail beautiful personalized greeting cards for any occasion. Easily customize one of our starter templates, or upload your own design. We never require a minimum order and will print and mail your card the next business day.</p>
+                </div>
+            </div>
+            <br><br>
+        </div>
+        <div class="row">
+            <a href="#" class="createown">Create Your Own Design</a>
+        </div>
+        <br><br>
+        <div class="row templatecardbelow">
+            <h3><span>Or Select A Template Below</span></h3>
+            <ul class="templatebelow">
+                <li>
+                    <div class="contain_template">
+                        <a href="#"><img src="../img/cardtpl1.png"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contain_template">
+                        <a href="#"><img src="../img/cardtpl2.png"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contain_template">
+                        <a href="#"><img src="../img/cardtpl3.png"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contain_template">
+                        <a href="#"><img src="../img/cardtpl4.png"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contain_template">
+                        <a href="#"><img src="../img/cardtpl5.png"></a>
+                    </div>
+                </li>
+                <li>
+                    <div class="contain_template">
+                        <a href="#"><img src="../img/cardtpl6.png"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+
+<script>
+    $(document).ready(function () {
+
+        $("a.topnode").bind("click", function () {
+            $(this).next().slideToggle();
+            if ($(this).hasClass("opened")) $(this).removeClass("opened").addClass("closed");
+            else $(this).addClass("opened");
+        });
+    });
+</script>  
+
