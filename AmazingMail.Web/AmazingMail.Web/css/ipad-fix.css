@@ -16,6 +16,82 @@ header.site-header.fixed {
 	header.site-header div.menu {
 		width:72%;
 	}
+	.listofsolutions .columns {
+		width:25%;
+	}
+	footer .columns, .abouthistory .columns {
+		width:50% !important;
+	}
+	.threecols-cards2 .large-6 {
+		width:50% !important;
+	}
+	.threecols-cards .large-4 {
+		width:33%;
+	}
+	.woodbg .columns {
+		width:49%;
+	}
+	.contact_bg .large-4.columns, .contact_bg .large-8.columns {
+		width:50%;
+		float:left;
+	}
+	.requestsample_bg .columns, .businesssolutions-bg .columns {
+		width:50%;
+	}
+	.formrequest_sample .columns {
+		width:100%;
+	}
+	.requestsamples .thecontent .large-6.columns {
+		width:50% !important;
+	}
+	#homebanner .mainbanner-content .columns, .lettersmain-bg .columns, .letterstab #tabs-1 .columns {
+		width: 50%;
+	}
+	.gradientblue .textcaptions .brochures, .gradientblue .textcaptions .postcards, .gradientblue .textcaptions .flyers, .gradientblue .textcaptions .folded-cards {
+		position:absolute !important;
+	}
+	.brochures {
+		margin-top: 67px;
+		width: 19% !important;
+		margin-left: 0px;
+	}
+	.postcards {
+		margin-left: 8px;
+		margin-top: 308px;
+		width: 12% !important;
+	}
+	.flyers {
+		margin-top: 43px;
+		right: 10px;
+		width: 20% !important;
+	}
+	.folded-cards {
+		margin-top: 287px;
+		left: 817px;
+		width: 17% !important;
+	}
+	.textcaptions.row {
+		position: absolute;
+	}
+	.aboutus_bg.thebanner .large-6, .whitelabelmain-bg.thebanner .large-6 {
+		background-color: transparent;
+		width: 59%;
+	}
+	.fourcolumns_card .columns {
+		width:25%;
+	}
+	.gradientgray .columns, .bcard-bg4 .columns, .woodbg-dark.brochure4 .columns, .flatgray .columns, .whitebg .columns,
+	.large-6.column.listpricing, .large-6.column.listpricing2, .flatgraymagnet #tabs-1 .columns, .flyersmain-bg .columns,
+	.scratchoffmain-bg .columns, .scratchoff3 .columns
+	 {
+		width:50%;
+	}
+	.flatgray .columns, .whitebg .columns, .large-6.column.listpricing, .large-6.column.listpricing2, .flatgraymagnet #tabs-1 .columns {
+		background-color:transparent !important;	
+	}
+	.flyerstab #tabs-1 .large-5 {
+		background-color:rgba(255,255,255,0.7) !important;
+	}
 }
 @media screen and (orientation:portrait) { 
 	.top .menu ul li {
@@ -28,4 +104,6 @@ header.site-header.fixed {
 	}
 }
 
-
+.contact_bg.thebanner .large-7, .contact_bg.thebanner .large-6, .contact_bg.thebanner .large-5, .contact_bg.thebanner .large-7 {
+	background-color:transparent;
+}
