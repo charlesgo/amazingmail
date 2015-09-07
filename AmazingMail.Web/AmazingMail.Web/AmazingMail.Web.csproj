@@ -185,6 +185,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Gallery\Scripts\Gallery.js" />
     <Content Include="css\ajax-loader.gif" />
     <Content Include="css\foundation.css" />
     <Content Include="css\foundation.min.css" />
