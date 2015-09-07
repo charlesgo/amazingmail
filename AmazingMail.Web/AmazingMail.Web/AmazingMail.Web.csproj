@@ -161,16 +161,23 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Areas\About\AboutAreaRegistration.cs" />
+    <Compile Include="Areas\About\Controllers\AboutController.cs" />
     <Compile Include="Areas\BusinessSolutions\BusinessSolutionsAreaRegistration.cs" />
     <Compile Include="Areas\BusinessSolutions\Controllers\BusinessSolutionsController.cs" />
     <Compile Include="Areas\Gallery\Controllers\GalleryController.cs" />
     <Compile Include="Areas\Gallery\GalleryAreaRegistration.cs" />
+    <Compile Include="Areas\Products\Controllers\ProductsController.cs" />
+    <Compile Include="Areas\Products\ProductsAreaRegistration.cs" />
+    <Compile Include="Areas\Support\Controllers\SupportController.cs" />
+    <Compile Include="Areas\Support\SupportAreaRegistration.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\JsonNetResult.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -340,6 +347,11 @@
     <Content Include="img\.gitkeep" />
     <Content Include="Areas\BusinessSolutions\Views\web.config" />
     <Content Include="Areas\BusinessSolutions\Views\BusinessSolutions\Index.cshtml" />
+    <Content Include="Properties\PublishProfiles\amazingmail-dev - FTP.pubxml.user" />
+    <Content Include="Properties\PublishProfiles\amazingmail-dev - Web Deploy.pubxml.user" />
+    <Content Include="Properties\PublishProfiles\amazingmail.pubxml.user" />
+    <Content Include="Properties\PublishProfiles\azure.pubxml.user" />
+    <Content Include="Properties\PublishProfiles\MBN.pubxml.user" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -379,9 +391,15 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\About\Models\" />
+    <Folder Include="Areas\About\Views\Shared\" />
     <Folder Include="Areas\BusinessSolutions\Models\" />
     <Folder Include="Areas\Gallery\Models\" />
     <Folder Include="Areas\Gallery\Views\Shared\" />
+    <Folder Include="Areas\Products\Models\" />
+    <Folder Include="Areas\Products\Views\Shared\" />
+    <Folder Include="Areas\Support\Models\" />
+    <Folder Include="Areas\Support\Views\Shared\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -407,6 +425,26 @@
     <Content Include="Areas\BusinessSolutions\Views\BusinessSolutions\TargetedMailingList.cshtml" />
     <Content Include="Areas\BusinessSolutions\Views\BusinessSolutions\GraphicDesign.cshtml" />
     <Content Include="Areas\BusinessSolutions\Views\BusinessSolutions\TradeShowCollateral.cshtml" />
+    <Content Include="NuGet.targets" />
+    <Content Include="Areas\Support\Views\Support\Contact.cshtml" />
+    <Content Include="Areas\Support\Views\Support\FAQ.cshtml" />
+    <Content Include="Areas\Support\Views\Support\Samples.cshtml" />
+    <Content Include="Areas\Support\Views\Support\Tips.cshtml" />
+    <Content Include="Areas\Support\Views\web.config" />
+    <Content Include="Areas\Products\Views\Products\Brochures.cshtml" />
+    <Content Include="Areas\Products\Views\Products\BusinessCards.cshtml" />
+    <Content Include="Areas\Products\Views\Products\CardsInEnvelopes.cshtml" />
+    <Content Include="Areas\Products\Views\Products\Flyers.cshtml" />
+    <Content Include="Areas\Products\Views\Products\FoldedCards.cshtml" />
+    <Content Include="Areas\Products\Views\Products\Index.cshtml" />
+    <Content Include="Areas\Products\Views\Products\Letters.cshtml" />
+    <Content Include="Areas\Products\Views\Products\Magnets.cshtml" />
+    <Content Include="Areas\Products\Views\Products\PopOutAndPerforated.cshtml" />
+    <Content Include="Areas\Products\Views\Products\PostCards.cshtml" />
+    <Content Include="Areas\Products\Views\Products\ScratchOff.cshtml" />
+    <Content Include="Areas\Products\Views\web.config" />
+    <Content Include="Areas\About\Views\About\Index.cshtml" />
+    <Content Include="Areas\About\Views\web.config" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\amazingmail-dev - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\amazingmail-dev - Web Deploy.pubxml" />

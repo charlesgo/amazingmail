@@ -1,0 +1,137 @@
+﻿
+@{
+    ViewBag.Title = "BusinessCards";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="businesscards-bg nopaddingtop5 thebanner">
+    <div class="mainbanner-content row">
+        <div class="large-12 bigh1 whitecontent">
+            <h1 class="aligncenter">Business Cards</h1>
+            <p class="aligncenter">
+                Use high-quality, glossy, full color business cards to leave a lasting impression on potential clients or business partners. Our business cards allow you to promote your brand with the utmost professionalism. Amazingmail offers full-color printing on both sides of your business cards.  Choose from matte or glossy finish. We’ll print and mail your business cards the next day.
+            </p>
+            <img class="aligncenter" src="~/img/busnescard-img.png">
+        </div>
+    </div>
+</div>
+
+<div class="businesscards-bg2 adm-banner nopaddingtop0 thebanner">
+    <div class="mainbanner-content">
+        <div class="large-12">
+            <div id="tabs">
+                <div class="bluebg">
+                    <ul>
+                        <li><a href="#tabs-1">Overview</a></li>
+                        <li><a href="#tabs-2">Pricing</a></li>
+                    </ul>
+                </div>
+                <div id="tabs-1">
+                    <div class="large-12 row">
+                        <div class="large-5 columns"></div>
+                        <div class="large-7 columns nopaddingtop3 bigh1">
+                            <h1>Common Uses<br> For Business Cards</h1>
+                            <ul class="orangeicon">
+                                <li class="orange1">Promote your brand</li>
+                                <li class="orange2">Give potential customers and business partners more options for contacting you</li>
+                                <li class="orange3">Make your business stand out from the pack</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div id="tabs-2">
+                    <div class="large-12 row">
+                        <div class="large-5 columns"></div>
+                        <div class="large-7 columns nopaddingtop3 bigh1">
+                            <h1>Lorem Ipsum<br> Dolor Sit Amit</h1>
+                            <ul class="orangeicon">
+                                <li class="orange1">Lorem here</li>
+                                <li class="orange2">Ipsum dolor</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="bcard-banner3 adm-banner thebanner">
+    <div class="row">
+        <div class="large-7 columns bigh1">
+            <h1>Build Trust And <br> Credibility </h1>
+            <p>Use high-quality, glossy, full color business cards to leave a lasting impression on potential clients or business partners. Our business card allow you to promote your brand with the utmost professionalism. Upload your own design or use one of our starter templates to create one from scratch. Build trust and credibility with your own business cards.</p>
+        </div>
+        <div class="large-4 columns"></div>
+    </div>
+</div>
+
+
+<div class="nopaddingtop3 thebanner woodbg-dark bcard4">
+    <div class="row">
+        <div class="large-6 columns alignright">
+            <img src="~/img/235.png">
+        </div>
+        <div class="large-6 columns">
+            <h1>Sizes</h1>
+            <ul>
+                <li>2" x 3.5"</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="bcard-bg4 nopaddingtop5 thebanner">
+    <div class="mainbanner-content row">
+        <div class="large-12 columns whitecontent bigh1 aligncenter">
+            <h1 class="aligncenter">Postage and Mailing</h1>
+            <span class="aligncenter orange4">Boxed and Shipped</span>
+        </div>
+    </div>
+</div>
+
+<div class="threecols-cards one_centered">
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="onecenter_container">
+                <div class="small-3">
+                    <img src="~/img/bigpdficon.png">
+                </div>
+                <div class="small-9 columns">
+                    <span>
+                        <br>
+                        <h2>Download A Design Template</h2>
+                        <a class="arrowright" href="#">Click Here</a>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+	$(function() {
+		$( "#accordion" ).accordion({
+			collapsible: true
+		});
+	});
+	$(function() {
+    	$( "#tabs" ).tabs();
+  	});
+	$(function() {
+    	$( "#tabs2" ).tabs();
+  	});
+	$(function() {
+    	$( ".tabspricing-parent" ).tabs();
+	});
+
+	$(".listofbusiness .picall").hover(
+      function () {
+          $(this).addClass("hover");
+          $(this).find(".heading").hide();
+      }, function () {
+          $(this).find(".heading").show();
+      }
+    );
+</script>
