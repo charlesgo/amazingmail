@@ -37,51 +37,52 @@ namespace AmazingMail.Web.Areas.Gallery.Controllers
         [HttpPost]
         public async Task<JsonResult> GetImagesByCategory(string pCategoryName, long? pID = 0)
         {
-            string json = string.Empty;
-          //https://www.amazingmail.com/services/gallery.php?auth=session&type=public_images&search=&recipe_item=0&page=1&size=100&width=-1&height=-1&gallery=m467
-            using (var client = new HttpClient())
-            {
-                client.BaseAddress = new Uri("http://www.amazingmail.com");
-                client.DefaultRequestHeaders.Accept.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
+          //  string json = string.Empty;
+          ////https://www.amazingmail.com/services/gallery.php?auth=session&type=public_images&search=&recipe_item=0&page=1&size=100&width=-1&height=-1&gallery=m467
+          //  using (var client = new HttpClient())
+          //  {
+          //      client.BaseAddress = new Uri("http://www.amazingmail.com");
+          //      client.DefaultRequestHeaders.Accept.Clear();
+          //      client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/xml"));
 
-                HttpResponseMessage response = await client.GetAsync("/services/gallery.php?auth=session&type=public_images&search=&recipe_item=0&page=1&size=100&width=-1&height=-1&gallery=m467");
-                if (response.IsSuccessStatusCode)
-                {
-                    var categorydesigns = response.Content.ReadAsStringAsync();//response.Content.ReadAsStringAsync();
-                    //var xmlDoc = new XmlDocument();
-                    //xmlDoc.LoadXml(categorydesigns.Result);
-                    //var xxx = XDocument.Parse(categorydesigns.Result);
-                    //CategoryDesigns categoryDesigns = new JavaScriptSerializer().Deserialize<CategoryDesigns>(categorydesigns.Result);
-                    //Console.WriteLine("{0}\t${1}\t{2}", product.Name, product.Price, product.Category);
-                    string res=categorydesigns.Result ;
-                    var xmlDoc = new XmlDocument();
-                    xmlDoc.LoadXml(res);
-                    json=Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlDoc);
+          //      HttpResponseMessage response = await client.GetAsync("/services/gallery.php?auth=session&type=public_images&search=&recipe_item=0&page=1&size=100&width=-1&height=-1&gallery=m467");
+          //      if (response.IsSuccessStatusCode)
+          //      {
+          //          var categorydesigns = response.Content.ReadAsStringAsync();//response.Content.ReadAsStringAsync();
+          //          //var xmlDoc = new XmlDocument();
+          //          //xmlDoc.LoadXml(categorydesigns.Result);
+          //          //var xxx = XDocument.Parse(categorydesigns.Result);
+          //          //CategoryDesigns categoryDesigns = new JavaScriptSerializer().Deserialize<CategoryDesigns>(categorydesigns.Result);
+          //          //Console.WriteLine("{0}\t${1}\t{2}", product.Name, product.Price, product.Category);
+          //          string res=categorydesigns.Result ;
+          //          var xmlDoc = new XmlDocument();
+          //          xmlDoc.LoadXml(res);
+          //          json=Newtonsoft.Json.JsonConvert.SerializeXmlNode(xmlDoc);
 
              
                     
-                }
+          //      }
 
+          //  }
+          //  var result=new {
+          //      json=json
+          //  }
+            //return new JsonNetResult(result);
+
+
+
+            var stringPath = Server.MapPath("~/" + "img/category/" + pCategoryName);
+            var filenames = new List<object>();
+            var filesstring = Directory.GetFiles(stringPath);
+            foreach (var file in filesstring)
+            {
+                filenames.Add(Path.GetFileName(file));
             }
-            var result=new {
-                json=json
-            }
-            return new JsonNetResult(result);
-            
-
-
-            //var stringPath = Server.MapPath("~/" + "img/category/" + pCategoryName);
-            //var filenames = new List<object>();
-            //var filesstring = Directory.GetFiles(stringPath);
-            //foreach (var file in filesstring)
-            //{
-            //    filenames.Add(Path.GetFileName(file));
-            //}
-            //var data=new {
-            //    filenames=filenames 
-            //};
-            //return new JsonNetResult(data);
+            var data = new
+            {
+                filenames = filenames
+            };
+            return new JsonNetResult(data);
 
             //using (var client = new HttpClient())
             //{
