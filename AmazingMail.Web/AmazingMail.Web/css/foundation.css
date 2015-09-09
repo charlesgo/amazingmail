@@ -6332,10 +6332,14 @@ p {
 
 .homebanner-container {
 	width:100%;
-	min-height:100%;
-	padding-top:200px;
+	min-height:871px;
     background:url(../img/homebanner-bg.jpg) no-repeat;	
-    background-size: cover;	
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 }
 
 .businesssolutions-bg {
