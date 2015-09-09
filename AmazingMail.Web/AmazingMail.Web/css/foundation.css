@@ -6842,9 +6842,10 @@ body .cardsinenvelope-bg h1 {
 }
 .tradeshow-bg {
 	width:100%;
-	min-height:630px;
+	min-height:700px;
 	background: url(../img/tradeshowbgmain.jpg);
 	background-repeat: no-repeat;
+	background-size:cover;
 }
 .tradeshow-bg4 {
 	width:100%;
