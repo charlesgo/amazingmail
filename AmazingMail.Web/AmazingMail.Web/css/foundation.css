@@ -6329,10 +6329,27 @@ p {
 	min-height:871px;
 	background:url(../img/homebanner-bg.jpg) no-repeat;	
 }
+
+.homebanner-container {
+	width:100%;
+	min-height:100%;
+	padding-top:200px;
+    background:url(../img/homebanner-bg.jpg) no-repeat;	
+    background-size: cover;	
+}
+
 .businesssolutions-bg {
 	width:100%;
 	min-height:705px;
+
+}
+.businesssolutions-container {
+	width:100%;
 	background:url(../img/bsolutions-bg.jpg) no-repeat;
+	-webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;	
 }
 .flyersmain-bg {
 	width:100%;
@@ -7294,7 +7311,7 @@ body .tabspricing-parent .tabsbg .ui-tabs-nav a, body .tabspricing-parent .tabst
     margin-bottom: 12px;
     position: relative;
     text-align: right;
-	margin-right:-30px;
+	margin-right:-50px;
     top: -25px;
 }
 .smallblue {
