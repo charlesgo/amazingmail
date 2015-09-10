@@ -6,30 +6,30 @@ using System.Web.Mvc;
 
 namespace AmazingMail.Web.Areas.Support.Controllers
 {
-    public class SupportController : Controller
+    public partial class SupportController : Controller
     {
         // GET: Support/Support
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             return View();
         }
-        public ActionResult Support()
+        public virtual ActionResult Support()
         {
             return View();
         }
-        public ActionResult Contact()
+        public virtual ActionResult Contact()
         {
             return View();
         }
-        public ActionResult FAQ()
+        public virtual ActionResult FAQ()
         {
             return View();
         }
-        public ActionResult Samples()
+        public virtual ActionResult Samples()
         {
             return View();
         }
-        public ActionResult Tips()
+        public virtual ActionResult Tips()
         {
             return View();
         }

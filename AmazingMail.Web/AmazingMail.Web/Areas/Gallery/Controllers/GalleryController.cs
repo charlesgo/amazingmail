@@ -14,25 +14,160 @@ using System.Xml.Linq;
 
 namespace AmazingMail.Web.Areas.Gallery.Controllers
 {
+    //[RouteArea("Tempaltes")] dont know y d fuck doesnt work;
+    [RoutePrefix("templates")]
     public class GalleryController : Controller
     {
-        // GET: Gallery/Gallery
-        public ActionResult Index()
+
+        [Route("business-cards")]
+        public virtual ActionResult Index(int? CategoryID)
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/acting-modeling")]
+        public virtual ActionResult ActingModeling(int? CategoryID)
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/automotive")]
+        public ActionResult Automotive()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/dental")]
+        public ActionResult Dental()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/education")]
+        public ActionResult Education()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/financial")]
+        public ActionResult Financial()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/florist")]
+        public ActionResult Florist()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/nonprofit")]
+        public ActionResult NonProfit()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/real-estate")]
+        public ActionResult RealEstate()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/religious-organizations")]
+        public ActionResult ReligiousOrganizations()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/recruiting")]
+        public ActionResult Recruiting()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/seminars-events")]
+        public ActionResult SeminarEvents()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/veterinary")]
+        public ActionResult Veterinary()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+
+        [Route("business-cards/birthdays")]
+        public ActionResult BirthDays()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/calendars")]
+        public ActionResult Calendars()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/cartoons")]
+        public ActionResult Cartoons()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/congratulations")]
+        public ActionResult Congratulations()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/just-moved")]
+        public ActionResult JustMoved()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/thank-you")]
+        public ActionResult ThankYou()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/tradeshows-promotions")]
+        public ActionResult TradeShowsPromotions()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/photo-cards")]
+        public ActionResult PhotoCards()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/traditional-cards")]
+        public ActionResult TraditionalCards()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/party-invitations")]
+        public ActionResult PartyInvitations()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/christmas")]
+        public ActionResult Christmas()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/hanukkah")]
+        public ActionResult Hanukkah()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+        [Route("business-cards/new-years")]
+        public ActionResult NewYears()
+        {
+            return View("~/Areas/Gallery/Views/Gallery/Index.cshtml"); //?? this hsould be automatic if the area is fix
+        }
+
+
+
+        public virtual ActionResult GreetingCards()
         {
             return View();
         }
-
-        public ActionResult GreetingCards()
+        public virtual ActionResult Category()
         {
-            return View();
+            return PartialView("_CategoryDisplay");
         }
 
-        public async Task<ActionResult> Category(long id)
-        {
-            await TestGet();
-            return View();
+        //public async Task<ActionResult> Category(long id)
+        //{
+        //    await TestGet();
+        //    return View();
 
-        }
+        //}
 
         [HttpPost]
         public async Task<JsonResult> GetImagesByCategory(string pCategoryName, long? pID = 0)

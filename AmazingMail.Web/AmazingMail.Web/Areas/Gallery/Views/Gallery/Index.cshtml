@@ -1,10 +1,192 @@
 ﻿
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Shared/_GalleryLayout.cshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
+    <div>
+        <div class="row">
+            <div class="large-3 columns">
+                <div class="leftmenu">
+                    <span>Categories</span>
+                    <ul class="card-leftmenu">
+                        <li class="parent active">
+                            <a href="#" class="topnode haschild opened" id="testA">Business Marketing Designs</a>
+                            <ul class="children" id="testUL">
+                                <li class="parent">
+                                    <a href="#" class="haschild">Search By Industry</a>
+                                    <ul class="children subchild">
+                                        @*<li><a href="Templates?CategoryID=1">Acting & Modeling</a></li>*@
+                                        <li>@Html.ActionLink("Acting & Modeling", "ActingModeling", "Gallery")</li>
+                                        <li>@Html.ActionLink("Automative", "automotive", "Gallery")</li>
+                                        <li>@Html.ActionLink("Dental", "Dental", "Gallery")</li>
+                                        <li>@Html.ActionLink("Education", "Education", "Gallery")</li>
+                                        <li>@Html.ActionLink("Financial", "Financial", "Gallery")</li>
+                                        <li>@Html.ActionLink("Florist", "Florist", "Gallery")</li>
+                                        <li>@Html.ActionLink("NonProfit", "NonProfit", "Gallery")</li>
+                                        <li>@Html.ActionLink("Real Estate", "RealEstate", "Gallery")</li>
+                                        <li>@Html.ActionLink("Religious Organizations", "ReligiousOrganizations", "Gallery")</li>
+                                        <li>@Html.ActionLink("Recruiting", "Recruiting", "Gallery")</li>
+                                        <li>@Html.ActionLink("Seminars", "SeminarEvents", "Gallery")</li>
+                                        <li>@Html.ActionLink("Veterinary", "Veterinary", "Gallery")</li>
+                                    </ul>
+                                </li>
+                               
+                                <li class="parent">
+                                    <a href="#" class="haschild">Search by General Purpose</a>
+                                    <ul class="children subchild">
+                                        <li>@Html.ActionLink("Birthday", "BirthDays", "Gallery")</li>
+                                        <li>@Html.ActionLink("Calendars", "Calendars", "Gallery")</li>
+                                        <li>@Html.ActionLink("Cartoons", "Cartoons", "Gallery")</li>
+                                        <li>@Html.ActionLink("Congratulations", "Congratulations", "Gallery")</li>
+                                        <li>@Html.ActionLink("Just Moved", "JustMoved", "Gallery")</li>
+                                        <li>@Html.ActionLink("Thank You", "ThankYou", "Gallery")</li>
+                                        <li>@Html.ActionLink("Tradeshow Promotion", "TradeShowsPromotions", "Gallery")</li>
+                                        <li>@Html.ActionLink("Photo Cards", "PhotoCards", "Gallery")</li>
+                                        <li>@Html.ActionLink("Traditional Cards", "TraditionalCards", "Gallery")</li>
+                                        <li>@Html.ActionLink("Party Invitations", "PartyInvitations", "Gallery")</li>
+                                    </ul>
+                                </li>
+                                <li class="parent">
+                                    <a href="#" class="haschild">Search by Holiday</a>
+                                    <ul class="children subchild">
+                                        <li>@Html.ActionLink("Christmas", "Christmas", "Gallery")</li>
+                                        <li>@Html.ActionLink("Hanukkah", "Hanukkah", "Gallery")</li>
+                                        <li>@Html.ActionLink("New Years", "NewYears", "Gallery")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
 
-    <div class="large-9 columns">
+                        <li class="parent">
+                            <a href="#" class="topnode closed">
+                                Greeting Card Designs
+                            </a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            @Html.Partial("~/Areas/Gallery/Views/Shared/_CategoryDisplay.cshtml");
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="row">
+            <h1 class="aligncenter paddingtop">Success Stories</h1>
+            <div class="autoplay">
+                <div>
+                    <p>“To increase response rates, Amazingmail recommended using the image personalization feature to enhance their cards. About 4 weeks after the mailing of 1217 cards went out, the company claimed they received more calls with this card than any other mailing they had ever done.”</p>
+                    <span>Keystone Healthcare</span>
+                    <img src="~/img/testlogo.png">
+                </div>
+                <div>Lorem ispum dolor emit.</div>
+                <div>your content</div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="blueportion">
+            <div class="row">
+                <h2>Ready to start seeing results?</h2>
+                <h3 class="light">Give us a call at <span class="orange">888-681-1214</span> and one of our direct mail experts can get you started.</h3>
+            </div>
+        </div>
+        <div class="firstline">
+            <div class="row">
+                <div class="large-6 columns asseenon">
+                    <span>As Seen On</span>
+                    <img src="~/img/asseenon.png">
+                </div>
+                <div class="large-6 columns newsletter">
+                    <span>Enter your email address to receive special offers</span>
+                    <div class="bginputtype">
+                        <form action="#" method="post">
+                            <input type="text" class="inputtext" placeholder="Your Email...">
+                            <input type="submit" value="Submit" class="submitbutton">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="secondline">
+            <div class="row">
+                <div class="large-9 columns">
+                    <ul class="firstlinks">
+                        <li><a href="#">Business Solutions</a></li>
+                        <li><a href="#" class="has-dropdown not-click">Products</a></li>
+                        <li><a href="#">Templates</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Support</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Resources</a></li>
+                    </ul>
+                    <ul class="secondlinks">
+                        <li><a href="#">User Agreement</a></li>
+                        <li><a href="#">Copyright Policy</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li>© 2015 Amazingmail.com®, Inc. All rights reserved . U.S. Patent No. 6,732,152</li>
+                    </ul>
+                </div>
+                <div class="large-3 columns snsfooter">
+                    <span>Connect With Us:</span>
+                    <ul class="sns">
+                        <li><a href="#" class="facebook">Facebook</a></li>
+                        <li><a href="#" class="linkedin">Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/js/slick.js" type="text/javascript"></script>
+    <script src="~/js/foundation.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).foundation();
+    </script>
+    <script type="text/javascript">
+        $('.autoplay').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            arrows: false,
+            dots: true,
+            autoplaySpeed: 2000,
+        });
+    </script>
+    <script type="text/javascript">
+
+
+        $(".listofbusiness .picall").hover(
+          function () {
+              $(this).addClass("hover");
+              $(this).find(".heading").hide();
+          }, function () {
+              $(this).find(".heading").show();
+          }
+        );
+    </script>
+    <script type="text/javascript">
+        var ie = (function () {
+
+            var undef,
+                v = 3,
+                div = document.createElement('div'),
+                all = div.getElementsByTagName('i');
+
+            while (
+                div.innerHTML = '<!--[if gt IE ' + (++v) + ']><i></i><![endif]-->',
+                all[0]
+            );
+
+            return v > 4 ? v : undef;
+
+        }());
+
+        if (ie < 9) {
+            alert("Please update your Internet Explorer to version 9 or later.");
+            window.location.href = "http://windows.microsoft.com/en-us/internet-explorer/download-ie";
+        }
+    </script>
+@*</body>*@
+    @*<div class="large-9 columns">
         <div class="row">
             <div class="gcardtpl_banner uniformc">
                 <div class="contbanner">
@@ -54,7 +236,7 @@
             </ul>
         </div>
         
-    </div>
+    </div>*@
 
 <script>
     $(document).ready(function () {

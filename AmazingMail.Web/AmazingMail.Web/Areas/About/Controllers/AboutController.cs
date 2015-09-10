@@ -6,10 +6,10 @@ using System.Web.Mvc;
 
 namespace AmazingMail.Web.Areas.About.Controllers
 {
-    public class AboutController : Controller
+    public partial class AboutController : Controller
     {
         // GET: About/About
-        public ActionResult Index()
+        public virtual ActionResult Index()
         {
             return View();
         }

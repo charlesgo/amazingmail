@@ -96,6 +96,10 @@
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
+    <Reference Include="T4MVCExtensions, Version=3.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
+      <HintPath>..\packages\T4MVCExtensions.3.16.0\lib\net40\T4MVCExtensions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="WebGrease">
       <Private>True</Private>
       <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
@@ -186,6 +190,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Gallery\Scripts\Gallery.js" />
+    <Content Include="Content\Site.css" />
     <Content Include="css\ajax-loader.gif" />
     <Content Include="css\foundation.css" />
     <Content Include="css\foundation.min.css" />
@@ -854,7 +859,6 @@
     <Folder Include="Areas\About\Views\Shared\" />
     <Folder Include="Areas\BusinessSolutions\Models\" />
     <Folder Include="Areas\Gallery\Models\" />
-    <Folder Include="Areas\Gallery\Views\Shared\" />
     <Folder Include="Areas\Products\Models\" />
     <Folder Include="Areas\Products\Views\Shared\" />
     <Folder Include="Areas\Support\Models\" />
@@ -904,6 +908,7 @@
     <Content Include="Areas\Products\Views\web.config" />
     <Content Include="Areas\About\Views\About\Index.cshtml" />
     <Content Include="Areas\About\Views\web.config" />
+    <Content Include="Areas\Gallery\Views\Shared\_CategoryDisplay.cshtml" />
     <None Include="Project_Readme.html" />
     <None Include="Properties\PublishProfiles\amazingmail-dev - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\amazingmail-dev - Web Deploy.pubxml" />
@@ -912,6 +917,9 @@
     <None Include="Properties\PublishProfiles\MBN.pubxml" />
     <Content Include="Views\Shared\_GalleryLayout.cshtml" />
     <Content Include="Views\Shared\_HomeLayout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
