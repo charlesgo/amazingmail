@@ -1,5 +1,4 @@
-﻿
-﻿<!doctype html>
+﻿﻿<!doctype html>
 <html class="no-js" lang="en">
 <head>
     <meta charset="utf-8" />
@@ -15,14 +14,45 @@
     <script src="~/js/jquery-ui.js" type="text/javascript"></script>
     <script type="text/javascript">
 
-    if(navigator.userAgent.match(/iPad/i)){
-      //alert("ipad");
-      document.write('<link rel="stylesheet" href="css/ipad-fix.css" />');
-}
+        if (navigator.userAgent.match(/iPad/i)) {
+            //alert("ipad");
+            document.write('<link rel="stylesheet" href="css/ipad-fix.css" />');
+        }
     </script>
 </head>
 <body>
-    <div class="logo-menu withbg">
+    @{
+        ViewData["string"] = Convert.ToString(Request.FilePath);
+    }
+
+    @{
+        var sort = (string)ViewData["string"];
+        switch (sort)
+        {
+            case "/":
+            <text>
+              <div class="logo-menu withoutbg">
+            </text>
+                break;
+            case "/Home/":
+            <text>
+                <div class="logo-menu withoutbg">
+            </text>
+                break;
+            case "/Home/Index":
+            <text>
+                <div class="logo-menu withoutbg">
+            </text>
+                break;
+            default:
+            <text>
+                <div class="logo-menu withbg">
+            </text>
+                break;
+        }
+
+    }
+
         <div class="row">
             <div class="top">
                 <header class="site-header" data-magellan-expedition="fixed">
@@ -51,7 +81,8 @@
                                                 <li><a href="~/BusinessSolutions/WhiteLabelFullFillmentSolutions">White Label Fulfillment</a></li>
                                                 <li><a href="~/BusinessSolutions/AutomatedDirectMail">Automated Direct Mail</a></li>
                                                 <li><a href="~/BusinessSolutions/PrintOnDemandWebPortals">>Print on Demand Web Portals</a></li>
-                                                <li><a href="~/BusinessSolutions/ResponseTracking">Response Tracking</a></li>                                                <li><a href="/Products/Letters">Letters</a></li>
+                                                <li><a href="~/BusinessSolutions/ResponseTracking">Response Tracking</a></li>
+                                                <li><a href="/Products/Letters">Letters</a></li>
                                                 <li><a href="~/BusinessSolutions/VariableData">Variable Data</a></li>
                                                 <li><a href="~/BusinessSolutions/TargetedMailingList">Targeted Mailing Lists</a></li>
                                                 <li><a href="~/BusinessSolutions/GraphicDesign">Graphic Design</a></li>
@@ -77,7 +108,7 @@
 
 
 
-                                        <li>@Html.ActionLink("Gallery","Index","Gallery")</li>
+                                        <li>@Html.ActionLink("Gallery", "Index", "Gallery")</li>
                                         @*<li><a href="#">Pricing</a></li>*@
                                         <li class="has-dropdown not-click">
                                             <a href="#" data-dropdown="hover3" data-options="is_hover:true">Pricing</a>
@@ -117,7 +148,7 @@
             </div>
         </div>
     </div>
-   
+
     <div>
         @RenderBody()
     </div>
@@ -190,7 +221,7 @@
             </div>
         </div>
     </footer>
-  
+
     <script type="text/javascript">
         $(document).foundation();
     </script>
@@ -207,15 +238,15 @@
     @*<script type="text/javascript">
 
 
-        $(".listofbusiness .picall").hover(
-          function () {
-              $(this).addClass("hover");
-              $(this).find(".heading").hide();
-          }, function () {
-              $(this).find(".heading").show();
-          }
-        );
-    </script>*@
+            $(".listofbusiness .picall").hover(
+              function () {
+                  $(this).addClass("hover");
+                  $(this).find(".heading").hide();
+              }, function () {
+                  $(this).find(".heading").show();
+              }
+            );
+        </script>*@
     <script type="text/javascript">
         var ie = (function () {
 
@@ -239,5 +270,6 @@
         }
     </script>
 </body>
+
 </html>
 ﻿
