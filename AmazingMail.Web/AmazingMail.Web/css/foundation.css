@@ -6865,6 +6865,17 @@ body .cardsinenvelope-bg h1 {
 	background: url(../img/aboutus_bg.jpg);
 	background-repeat: no-repeat;
 }
+.aboutus-container {
+	width:100%;
+	min-height:871px;
+    background:url(../img/aboutus_bg.jpg) no-repeat;	
+    background-position: 50% 50%;
+    background-repeat:   no-repeat;
+    background-size:     cover;	
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+}
 .contact_bg {
 	width:100%;
 	min-height:645px;
@@ -9049,6 +9060,9 @@ body .tabspricing-parent.child .ui-tabs-panel table tr td:last-child {
 .spacing-180{ height:180px; width:100%;}
 .spacing-190{ height:190px; width:100%;}
 .spacing-200{ height:200px; width:100%;}
+.spacing-220{ height:220px; width:100%;}
+.spacing-240{ height:240px; width:100%;}
+.spacing-260{ height:260px; width:100%;}
 
 /** End Spacings **/
 

@@ -205,6 +205,8 @@
     <Content Include="fonts\Lato-Regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="img\24hricon.png" />
+    <Content Include="img\aboutimg2.png" />
+    <Content Include="img\aboutus_bg.jpg" />
     <Content Include="img\accreditedbusiness-icon.png" />
     <Content Include="img\actingmodeling-bg.jpg" />
     <Content Include="img\actmodel1.png" />
